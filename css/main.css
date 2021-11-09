@@ -1,0 +1,331 @@
+@font-face {
+    font-family: newFont;
+    src: url('../fonts/awesome_possum_outline/Awesome\ Possum\ Outline\ Demo.otf');
+}
+
+@font-face {
+    font-family: newFont2;
+    src: url('../fonts/extreme_2/Extreme.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* BASIC */
+html {
+    font-family: Helvetica, Arial sans-serif;
+    color: #4f4e4e;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    background-color: #ffffff;
+    position: relative;
+
+}
+
+
+
+button {
+    background-image: linear-gradient(to right, #b6ccfe 0%, #346bec 51%, #c2d4ff 100%);
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid rgb(110, 110, 110);
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+
+
+button:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* header */
+.app-header {
+    padding: 10px;
+    height: 10vh;
+    background-color: #b6ccfe;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.app-header h3 {
+    margin: auto;
+    font-size: 100px;
+    color: #346bec;
+    font-family: newFont2;
+}
+
+.app-main {
+    height: 95%;
+    min-height: 85vh;
+
+}
+
+/*nav*/
+.main-nav {
+    width: 50%;
+    color: white;
+    text-decoration: none;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.main-nav>*:hover {
+    font-size: 2.5em;
+}
+
+.main-nav>* {
+    color: #4f4e4e;
+    font-size: 2em;
+    text-decoration: none;
+
+
+}
+
+/* book-app */
+.book-app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #f2f6ffe8;
+}
+
+
+/*Details*/
+.book-details {
+    padding: 20px;
+    background-color: #ecf8f8;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.high-price {
+    background-color: red;
+    color: white;
+}
+
+.low-price {
+    background-color: green;
+    color: white;
+}
+
+.img-sale {
+    height: 100px;
+    display: block;
+    margin: 10px auto;
+}
+
+.img-thumnail {
+    width: 120px;
+    height: 140px;
+    margin: auto;
+}
+
+.read-more-btn {
+    color: blue;
+    text-decoration: blue;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* footer */
+.app-footer {
+    padding: 10px;
+    height: 100px;
+    background-color: #c1d3fe;
+    text-align: center;
+}
+
+
+
+/* filter */
+.book-filter {
+    height: 5vh;
+    text-align: center;
+    background-color: #d7e3fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+
+}
+
+
+/* edit */
+.book-edit {
+    background-color: lightcoral;
+    /* padding: 20px; */
+}
+
+
+/* list */
+.book-list {
+    margin: 0;
+    flex-grow: 1;
+    padding: 20px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+
+}
+
+
+/* preview */
+.book-preview-container {
+    background-color: #dde7f8;
+    padding: 5px;
+    border: 1px solid black;
+    height: 350px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book-preview {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    margin: auto;
+    gap: 10px;
+}
+
+
+/* user msg */
+
+.user-msg {
+    color: black;
+    font-size: 2em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+}
+
+.success {
+    background-color: rgb(255, 255, 255);
+    border: 5px solid rgb(27, 180, 27);
+    border-radius: 15px;
+}
+
+.error {
+    background-color: rgb(255, 255, 255);
+    border: 5px solid rgb(241, 42, 42);
+    border-radius: 15px;
+}
+
+/* links */
+
+.router-link-exact-active {
+    color: rgb(65, 77, 250)
+}
+
+.active-link {
+    /* color: red; */
+    color: rgb(65, 77, 250)
+}
+
+/* animations */
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to
+/* .fade-leave-active below version 2.1.8 */
+
+    {
+    opacity: 0;
+}
+
+/*home page*/
+.home-books-img {
+    object-fit: cover;
+    width: 70%;
+    margin: 10px auto;
+}
+
+/*review-form*/
+.review-form {
+    padding: 10px;
+    border: #4f4e4e 2px solid;
+    background-color: #dde7f8;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+}
+
+textarea {
+    width: 90%;
+}
+
+.delete-review-btn {
+    display: inline-block;
+}
+
+/*animation*/
+.bounce-enter-active {
+    animation: bounce-in .5s;
+}
+
+.bounce-leave-active {
+    animation: bounce-in .5s reverse;
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
